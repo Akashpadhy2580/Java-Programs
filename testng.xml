@@ -1,0 +1,14 @@
+<suite name="TestSuite">
+
+    <test name="Test">
+        <groups>
+            <run>
+                <include name="setup"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.thyron.Test1" />
+            <class name="org.thyron.Test2" />
+        </classes>
+    </test>
+</suite>
