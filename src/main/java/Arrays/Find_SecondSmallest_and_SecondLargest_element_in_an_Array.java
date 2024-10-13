@@ -1,6 +1,7 @@
 package Arrays;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Find_SecondSmallest_and_SecondLargest_element_in_an_Array
 {
@@ -18,6 +19,17 @@ public class Find_SecondSmallest_and_SecondLargest_element_in_an_Array
                 Arrays.sort(a);
                 System.out.println("Second smallest: "+a[1]);
                 System.out.println("Second largest: "+a[a.length-2]);
+
+                //way-3 (Stream API)
+                System.out.println("Second smallest: "+
+                        Arrays.stream(a).boxed().sorted().skip(1).findFirst().get());
+                System.out.println("Second largest: "+
+                        Arrays.stream(a)
+                                .boxed()
+                                .sorted(Comparator.reverseOrder())
+                                .skip(1)
+                                .findFirst()
+                                .get());
         }
 
         public static int secondSmallest(int[] a) {

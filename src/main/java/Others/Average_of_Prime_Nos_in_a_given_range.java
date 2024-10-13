@@ -1,12 +1,16 @@
 package Others;
 
+import java.util.Scanner;
+
 public class Average_of_Prime_Nos_in_a_given_range
 {
         public static void main(String[] args)
         {
                 //Average of Prime Nos in a given range
-                int start=10;
-                int end=20;
+                Scanner sc=new Scanner(System.in);
+                int start=sc.nextInt();
+                int end=sc.nextInt();
+                sc.close();
                 System.out.println(averageofPrime(start,end));
         }
 

@@ -16,7 +16,7 @@ public class Group_Anagrams
                         Arrays.sort(chars);
                         return new String(chars);
                 }));
-                System.out.println(result.values());
+                System.out.println(Arrays.toString(result.values().toArray()));
 
                 //Way-2
                 Map<String, List<String>> hm=new HashMap<>();

@@ -11,9 +11,8 @@ public class Find_Occurance_of_each_word_in_String
                 String[] words=str.split("\\s");
                 HashMap<String,Integer> hm=new HashMap<>();
 
-                for(int i=0;i<words.length;i++)
+                for(String word:words)
                 {
-                        String word=words[i];
                         if(hm.containsKey(word))
                         {
                                 hm.put(word, hm.get(word)+1);
@@ -26,5 +25,5 @@ public class Find_Occurance_of_each_word_in_String
                 for(String word:hm.keySet())
                 {
                         System.out.println(word+" : " +hm.get(word));}
-        }
+                }
 }
